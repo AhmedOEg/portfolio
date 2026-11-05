@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Welcome</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -134,7 +134,7 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Machine Learning Engineer builds intelligent systems that turn complex datasets into scalable, actionable solutions. My expertise spans designing robust predictive models, optimizing deep learning pipelines, and deploying MLOps solutions that bridge the gap between data science and production-ML software.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Machine Learning Engineer builds intelligent systems that turn complex datasets into scalable, actionable solutions.<br /> My expertise spans designing robust predictive models, optimizing deep learning pipelines, and deploying MLOps solutions that bridge the gap between data science and production-ML software.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">Besides being a Telecommunications Engineer with 15+ years in aviation systems and 10+ years in software development and quantitative finance. Bridges mission-critical infrastructure expertise with advanced data science capabilities, building Python-based financial models, deploying scalable AWS solutions, and developing ERP applications.</p></div>
                 </div>
                 
@@ -155,50 +155,42 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
                         <form action="https://formspree.io/f/xljjvrap" method="POST">
+                            
+                            <!-- Hidden field to give the email a clear subject line -->
+                            <input type="hidden" name="_subject" value="New message from your Portfolio Site!">
+
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <!-- Added name="name" and required -->
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <!-- Added name="email" and required -->
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <!-- Added name="phone" -->
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <!-- Added name="message" and required -->
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..." style="height: 10rem" required data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -212,26 +204,38 @@
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
+                            Cairo, Egypt
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <h4 class="text-uppercase mb-4">Social</h4>
+                    
+                        <!-- LinkedIn -->
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/ahmed-osama-46151345" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-fw fa-linkedin-in"></i>
+                        </a>
+                    
+                        <!-- GitHub -->
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/AhmedOEg" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-fw fa-github"></i>
+                        </a>
+                    
+                        <!-- Website/Portfolio -->
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://ahmedoeg.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-fw fa-globe"></i>
+                        </a>
+
+                        <!-- Email -->
+                        <a class="btn btn-outline-light btn-social mx-1" href="mailto:ahmed.osama.eg@gmail.com">
+                            <i class="fas fa-fw fa-envelope"></i>
+                        </a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <h4 class="text-uppercase mb-4">About Me</h4>
                         <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
+                            This is My Portfolio Website.<br/> Hosted by GitHub Pages.
                         </p>
                     </div>
                 </div>
@@ -239,7 +243,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+            <div class="container"><small>Copyright &copy; Ahmed Osama Website 2026</small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
@@ -438,10 +442,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
